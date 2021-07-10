@@ -21,3 +21,9 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 - CountVectorizer
 - TfidfVectorizer
 - HashingVectorizer
+
+### Chapter 7 -How to Prepare Date with Keras
+- text_to_word_sequence
+- one_hot
+- hashing_trick
+- Tokenizer API
