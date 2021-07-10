@@ -16,3 +16,8 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 - Normalize (Convert to lowercase)
 - Filter out stopwords
 - Stem Words
+
+### Chapter 6 - Learn How to Prepare Data with Scikit-learn
+- CountVectorizer
+- TfidfVectorizer
+- HashingVectorizer
