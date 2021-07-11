@@ -22,8 +22,18 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 - TfidfVectorizer
 - HashingVectorizer
 
-### Chapter 7 -How to Prepare Date with Keras
+### Chapter 7 - How to Prepare Date with Keras
 - text_to_word_sequence
 - one_hot
 - hashing_trick
 - Tokenizer API
+
+### Chapter 9 - How to Prepare IMDB Reviews for Sentimental Analysis
+- Load negative & positive reviews and split into tokens
+- Clean up
+  - Remove punctuations
+  - Remove stopwords
+  - Remove non-alphabetics characters
+  - Remove one-character tokens
+- Construct vocabulary (Remove least-frequently used tokens)
+- Reformat reviews using the vocabulary
