@@ -37,3 +37,10 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
   - Remove one-character tokens
 - Construct vocabulary (Remove least-frequently used tokens)
 - Reformat reviews using the vocabulary
+
+### Chapter 10 - Project: Develop a Neural Bag-of-Words Model for Sentimental Analysis
+- Load cleaned data from chapter 9
+- Define, train and evaluate model
+- Apply sentimental analysis
+
+### Project - Sentimental Analysis on IMDB Movie Reviews Dataset
