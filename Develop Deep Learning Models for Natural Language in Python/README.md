@@ -43,4 +43,5 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 - Define, train and evaluate model
 - Apply sentimental analysis
 
-### Project - Sentimental Analysis on IMDB Movie Reviews Dataset
+### Projects
+- Project - Sentimental Analysis on IMDB Movie Reviews Dataset (Chapter 10)
