@@ -45,3 +45,6 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 
 ### Projects
 - Project - Sentimental Analysis on IMDB Movie Reviews Dataset (Chapter 10)
+
+### Linkes
+- [Word2Vec Learned Model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
