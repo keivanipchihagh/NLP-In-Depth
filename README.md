@@ -6,3 +6,4 @@
 - [Gensim Documentation](https://radimrehurek.com/gensim/auto_examples/index.html)
 - [Word2Vec Documentation](https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html#sphx-glr-auto-examples-tutorials-run-word2vec-py)
 - [GloVe Documentation](https://nlp.stanford.edu/projects/glove/)
+- [Hugging Face NLP Course](https://huggingface.co/course/chapter1)
