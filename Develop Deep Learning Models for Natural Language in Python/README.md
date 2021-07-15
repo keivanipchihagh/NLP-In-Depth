@@ -48,4 +48,4 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 
 ### Linkes
 - [Word2Vec Learned Model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
-- [Google's Word2Vec Bin fiels](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing)
+- [Google's Word2Vec pre trained model (3.4GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing)
