@@ -47,5 +47,5 @@ Codes, models and examples for each chapter of the **Develop Deep Learning Model
 - Project - Sentimental Analysis on IMDB Movie Reviews Dataset (Chapter 10)
 
 ### Linkes
-- [Word2Vec Learned Model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
-- [Google's Word2Vec pre trained model (3.4GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing)
+- [Word2Vec Pretrained Model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
+- [GloVe Pretrained Model (~800MB)](http://nlp.stanford.edu/data/glove.6B.zip)
