@@ -1,7 +1,7 @@
 # NLP-In-Depth Cheetsheet
 
 ## Keras
-- One-Hot-Encoding
+- Tokenizer
 ```python
 from keras.preprocessing.text import Tokenizer
 
