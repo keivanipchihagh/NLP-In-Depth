@@ -19,3 +19,8 @@ plot_model(model = model, to_file = 'path_to_file.png', show_shapes = False, sho
 from keras.preprocessing.sequence import pad_sequences
 X = pad_sequences(X, maxlen = maxlen, dtype = 'int32', padding = 'pre', truncating = 'pre', value = 0.0) # padding & truncating: 'pre', 'post'
 ```
+- Train & Test Split
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(doc_vectors, spam.label, test_size = 0.1, random_state = 42)
+```
