@@ -22,5 +22,5 @@ X = pad_sequences(X, maxlen = maxlen, dtype = 'int32', padding = 'pre', truncati
 - Train & Test Split
 ```python
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(doc_vectors, spam.label, test_size = 0.1, random_state = 42)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.1, random_state = 42)
 ```
