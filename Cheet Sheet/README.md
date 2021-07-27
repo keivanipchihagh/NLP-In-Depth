@@ -31,3 +31,24 @@ encoder = LabelEncoder()
 encoded_x = encoder.fit_transform(x)
 mapper = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 ```
+- Text to Word Sequence | Keras
+```python
+from keras.preprocessing.text import text_to_word_sequence
+result = text_to_word_sequence(text)
+```
+- One Hot | Keras
+```python
+from keras.preprocessing.text import one_hot
+from keras.preprocessing.text import text_to_word_sequence
+words = set(text_to_word_sequence(text))
+vocab_size = len(words)
+result = one_hot(text, round(vocab_size * 1.3))
+```
+- Hashing Trick
+```python
+from keras.preprocessing.text import hashing_trick
+from keras.preprocessing.text import text_to_word_sequence
+words = set(text_to_word_sequence(text))
+vocab_size = len(words)
+result = hashing_trick(text, round(vocab_size * 1.2), hash_function = 'md5')
+```
