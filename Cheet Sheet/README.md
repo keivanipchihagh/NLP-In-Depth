@@ -44,7 +44,7 @@ words = set(text_to_word_sequence(text))
 vocab_size = len(words)
 result = one_hot(text, round(vocab_size * 1.3))
 ```
-- Hashing Trick
+- Hashing Trick | Keras
 ```python
 from keras.preprocessing.text import hashing_trick
 from keras.preprocessing.text import text_to_word_sequence
