@@ -110,3 +110,35 @@ embedding = Embedding(
 ```
 More: [keras decumentation](https://keras.io/api/layers/core_layers/embedding/)
 <hr/>
+
+### Keras | Layer | Pretrained Embedding with GloVe
+```python
+import numpy as np
+from keras.layers import Embedding
+
+# compute an index mapping words to known embeddings
+embeddings_index = {}
+with open(GLOVE_DIR, encoding = "utf8") as file:
+  for line in f:
+      values = line.split()
+      embeddings_index[values[0]] = np.asarray(values[1:], dtype='float32')
+
+# computer matrix for the vocabulary words
+embedding_matrix = np.zeros((len(word_index) + 1, EMBEDDING_DIM))
+for word, i in word_index.items():
+    embedding_vector = embeddings_index.get(word)
+    if embedding_vector is not None:
+        embedding_matrix[i] = embedding_vector    # words not found in embedding index will be all-zeros.
+
+from keras.layers import Embedding
+
+embedding_layer = Embedding(
+  input_dim = len(word_index) + 1,              # size of the vocabulary
+  outpu_dim = EMBEDDING_DIM,                    # dimension of the dense embedding
+  weights = [embedding_matrix],                 # weights
+  input_length = MAX_SEQUENCE_LENGTH,           # constant length of input sequences
+  trainable = False,                            # freezes weights so they don't change in the training process
+)
+```
+More: [keras decumentation](https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html)
+<hr/>
