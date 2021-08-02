@@ -96,3 +96,17 @@ result = one_hot(
 ```
 More: [tensorflow decumentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/one_hot)
 <hr/>
+
+### Keras | Layer | Embedding
+```python
+from keras.layers import Embedding
+
+embedding = Embedding(
+  input_dim = vocab_size,                      # size of the vocabulary
+  output_dim = <number>,                       # dimension of the dense embedding
+  mask_zero = False                            # whether the value '0' is a special "padding" value that should be masked out
+  input_length = max_length_of_each_sequence   # constant length of input sequences (required if Flatten and Dense are used!)
+)   # returns: 3D tensor with shape: (batch_size, input_length, output_dim)
+```
+More: [keras decumentation](https://keras.io/api/layers/core_layers/embedding/)
+<hr/>
