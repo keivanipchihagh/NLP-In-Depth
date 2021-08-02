@@ -51,36 +51,48 @@ X = pad_sequences(
 More: [tensorflow decumentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences)
 <hr/>
 
-- Train & Test Split | sklearn
+### Scikit-Learn | Model Selection | Train & Test Split
 ```python
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.1, random_state = 42)
+
+X_train, X_test, y_train, y_test = train_test_split(
+  x_arr,
+  y_arr,
+  test_size = 0.1,    # should be in rnage (0.0,1.0) and is the proportion of the dataset to include in the test split.
+  random_state = 42,  # controls the shuffling applied to the data before applying the split
+  shuffle = True,     # whether or not to shuffle the data before splitting (if shuffle=False then stratify must be None)
+  stratify = None
+)
 ```
-- LabelEncoder | sklearn
+More: [scikit-learn decumentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
+<hr/>
+
+### Scikit-Learn | Preprocessing | LabelEncoder
 ```python
 from sklearn.preprocessing import LabelEncoder
+
 encoder = LabelEncoder()
-encoded_x = encoder.fit_transform(x)
-mapper = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
+encoded_x = encoder.fit_transform(x)                                        # Fit label encoder and return encoded labels.
+x = inverse_transform(y)                                                    # transform labels back to original encoding.
+mapper = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))   # word to encode index mapper
 ```
-- Text to Word Sequence | Keras
-```python
-from keras.preprocessing.text import text_to_word_sequence
-result = text_to_word_sequence(text)
-```
-- One Hot | Keras
+More: [scikit-learn decumentation](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
+<hr/>
+
+- Keras | Preprocessing | One Hot
 ```python
 from keras.preprocessing.text import one_hot
 from keras.preprocessing.text import text_to_word_sequence
-words = set(text_to_word_sequence(text))
+
+words = set(text_to_word_sequence(text))            # convert string sequence to its words
 vocab_size = len(words)
-result = one_hot(text, round(vocab_size * 1.3))
+result = one_hot(
+  input_text = text,                                  # input text (string)
+  n = round(vocab_size * 1.3),                        # size of vocabulary
+  filters = ''!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n',
+  lower = True,                                       # boolean. whether to set the text to lowercase.
+  split = ' '                                         # str. separator for word splitting.
+)
 ```
-- Hashing Trick | Keras
-```python
-from keras.preprocessing.text import hashing_trick
-from keras.preprocessing.text import text_to_word_sequence
-words = set(text_to_word_sequence(text))
-vocab_size = len(words)
-result = hashing_trick(text, round(vocab_size * 1.2), hash_function = 'md5')
-```
+More: [tensorflow decumentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/one_hot)
+<hr/>
