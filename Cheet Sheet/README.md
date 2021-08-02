@@ -79,7 +79,7 @@ mapper = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))   # wo
 More: [scikit-learn decumentation](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
 <hr/>
 
-- Keras | Preprocessing | One Hot
+### Keras | Preprocessing | One Hot
 ```python
 from keras.preprocessing.text import one_hot
 from keras.preprocessing.text import text_to_word_sequence
