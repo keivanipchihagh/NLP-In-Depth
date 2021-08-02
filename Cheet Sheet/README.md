@@ -1,24 +1,56 @@
-# NLP-In-Depth Cheetsheet
+# NLP Cheatsheet
 
-## Keras
-- Tokenizer | keras
+### keras | Preprocessing | Tokenizer
 ```python
 from keras.preprocessing.text import Tokenizer
 
-tokenizer = Tokenizer(num_words = 1000, lower = True, split = ' ', char_level = False, oov_token = None)
-tokenizer.fit_on_texts(sentences)
+tokenizer = Tokenizer(
+  num_words = 1000,       # the maximum number of words to keep (Only the most common num_words-1 words will be kept)
+  lower = True,           # boolean. Whether to convert the texts to lowercase.
+  split = ' ',            # str. Separator for word splitting.
+  char_level = False,     # if True, every character will be treated as a token.
+  oov_token = None        # replaces out-of-vocabulary words during text_to_sequence calls with oov_token
+)
+tokenizer.fit_on_texts(sentences)   # can be a list of strings
 one_hot_encodes = tokenizer.texts_to_matrix(sentences, mode = 'binary') # Modes: 'binary', 'count', 'freq', 'tfidf'
 ```
-- Plot Model | keras
+More: [tensorflow documentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer)
+<hr/>
+
+### Keras | Utils | Plot Model
 ```python
 from keras.utils.vis_utils import plot_model
-plot_model(model = model, to_file = 'path_to_file.png', show_shapes = False, show_dtypes = False, show_layer_names = True, rankdir = 'TB', expand_nested = False, dpi = 96)
+
+plot_model(
+  model = model,                  # a Keras model instance
+  to_file = 'path_to_file.png',   # file name of the plot image.
+  show_shapes = False,            # whether to display shape information.
+  show_dtypes = False,            # whether to display layer dtypes.
+  show_layer_names = True,        # whether to display layer names.
+  rankdir = 'TB',                 # format for PyDot: 'TB' creates a vertical plot; 'LR' creates a horizontal plot.
+  expand_nested = False,          # whether to expand nested models into clusters.
+  dpi = 96                        # dots per inch.
+)
 ```
-- Pad Sequence | keras
+More: [tensorflow decumentation](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model)
+<hr/>
+
+### Keras | Preprocessing | Pad Sequence
 ```python
 from keras.preprocessing.sequence import pad_sequences
-X = pad_sequences(X, maxlen = maxlen, dtype = 'int32', padding = 'pre', truncating = 'pre', value = 0.0) # padding & truncating: 'pre', 'post'
+
+X = pad_sequences(
+  sequences,            # list of sequences (each sequence is a list of integers).
+  maxlen = maxlen,      # maximum length of all sequences. defaults to the length of the longest individual sequence.
+  dtype = 'int32',      # type of the output sequences.
+  padding = 'pre',      # pad either before or after each sequence ('pre' or 'post')
+  truncating = 'pre',   # remove values from sequences larger than maxlen ('pre' or 'post')
+  value = 0.0           # float or String, padding value.
+)
 ```
+More: [tensorflow decumentation](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/sequence/pad_sequences)
+<hr/>
+
 - Train & Test Split | sklearn
 ```python
 from sklearn.model_selection import train_test_split
