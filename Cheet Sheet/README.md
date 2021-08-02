@@ -130,8 +130,7 @@ for word, i in word_index.items():
     if embedding_vector is not None:
         embedding_matrix[i] = embedding_vector    # words not found in embedding index will be all-zeros.
 
-from keras.layers import Embedding
-
+# Define layer
 embedding_layer = Embedding(
   input_dim = len(word_index) + 1,              # size of the vocabulary
   outpu_dim = EMBEDDING_DIM,                    # dimension of the dense embedding
