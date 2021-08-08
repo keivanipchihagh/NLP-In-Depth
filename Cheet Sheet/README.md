@@ -119,7 +119,7 @@ from keras.layers import Embedding
 # compute an index mapping words to known embeddings
 embeddings_index = {}
 with open(GLOVE_DIR, encoding = "utf8") as file:
-  for line in f:
+  for line in file:
       values = line.split()
       embeddings_index[values[0]] = np.asarray(values[1:], dtype='float32')
 
