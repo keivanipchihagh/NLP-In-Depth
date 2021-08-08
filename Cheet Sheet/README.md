@@ -133,7 +133,7 @@ for word, i in word_index.items():
 # Define layer
 embedding_layer = Embedding(
   input_dim = len(word_index) + 1,              # size of the vocabulary
-  outpu_dim = EMBEDDING_DIM,                    # dimension of the dense embedding
+  output_dim = EMBEDDING_DIM,                    # dimension of the dense embedding
   weights = [embedding_matrix],                 # weights
   input_length = MAX_SEQUENCE_LENGTH,           # constant length of input sequences
   trainable = False,                            # freezes weights so they don't change in the training process
