@@ -25,7 +25,7 @@ plot_model(
   model = model,                  # a Keras model instance
   to_file = 'path_to_file.png',   # file name of the plot image.
   show_shapes = False,            # whether to display shape information.
-  show_dtypes = False,            # whether to display layer dtypes.
+  show_dtype = False,            # whether to display layer dtypes.
   show_layer_names = True,        # whether to display layer names.
   rankdir = 'TB',                 # format for PyDot: 'TB' creates a vertical plot; 'LR' creates a horizontal plot.
   expand_nested = False,          # whether to expand nested models into clusters.
